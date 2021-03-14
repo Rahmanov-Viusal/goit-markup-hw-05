@@ -12,6 +12,7 @@
   --color-contact-footer: #ffffff 60 %;
   --bg-section-team: #f5f4fa;
   --bg-social-footer: rgba(255, 255, 255, 0.1);
+  --bg-work-content:rgba(47, 48, 58, 0.8);
 }
 /* ======глобальнвй сброс======= */
 h1,
@@ -328,6 +329,36 @@ body {
 }
 .occupation-img .img:nth-child(3n) {
   margin-right: 0px;
+}
+/* ===== label img occupation ===== */
+
+.img-content{
+  position: relative;
+}
+.work-content{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  width: 370px;
+  height: 70px;
+ 
+  background-color:var(--bg-work-content); 
+}
+
+.work-text{
+  margin-top: 27px;
+
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--bg-main-page-color);
+ 
 }
 /* ======= section-team ======= */
 .section-team {
