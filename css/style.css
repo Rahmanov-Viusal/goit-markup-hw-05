@@ -12,8 +12,8 @@
   --color-contact-footer: #ffffff;
   --bg-section-team: #f5f4fa;
   --bg-social-footer: rgba(255, 255, 255, 0.1);
-  --bg-work-content:rgba(47, 48, 58, 0.8);
-  --bg-backdrop:rgba(0, 0, 0, 0.2);
+  --bg-work-content: rgba(47, 48, 58, 0.8);
+  --bg-backdrop: rgba(0, 0, 0, 0.2);
   --bg-poject-hover: rgba(33, 150, 243, 0.9);
 }
 /* ======глобальнвй сброс======= */
@@ -75,6 +75,8 @@ body {
   font-family: Raleway;
 }
 .name-company {
+  padding: 24px 0px 25px;
+
   color: var(--name-color);
   font-family: Raleway;
 
@@ -82,13 +84,15 @@ body {
   line-height: 1.2;
   text-decoration: none;
 }
-
+.navigation:hover .name-company {
+  animation-name: bounceIn;
+  animation-duration: 2000ms;
+  animation-timing-function: linear;
+}
 /* навигация в шапке */
 .site-nav {
   display: flex;
   margin-left: 93px;
-
-  
 }
 
 .site-nav .link {
@@ -104,7 +108,6 @@ body {
   text-decoration: none;
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  
 }
 .nav-list + .nav-list {
   margin-left: 50px;
@@ -114,8 +117,7 @@ body {
 .site-nav :focus {
   color: var(--bg-button-color);
 
-   transform: scaleX(1);
-  
+  transform: scaleX(1);
 }
 .site-nav .current {
   color: var(--bg-button-color);
@@ -261,7 +263,7 @@ body {
   cursor: pointer;
 
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-  color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button-hero:hover,
 .button-hero:focus {
@@ -348,21 +350,21 @@ body {
 }
 /* ===== label img occupation ===== */
 
-.img-content{
+.img-content {
   position: relative;
 }
-.work-content{
+.work-content {
   position: absolute;
   left: 0;
   bottom: 0;
 
   width: 370px;
   height: 70px;
- 
-  background-color:var(--bg-work-content); 
+
+  background-color: var(--bg-work-content);
 }
 
-.work-text{
+.work-text {
   margin-top: 27px;
 
   font-style: normal;
@@ -374,7 +376,6 @@ body {
   text-transform: uppercase;
 
   color: var(--bg-main-page-color);
- 
 }
 /* ======= section-team ======= */
 .section-team {
@@ -439,7 +440,7 @@ body {
   border-radius: 50%;
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-  background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-item {
   margin-right: 5px;
@@ -485,7 +486,7 @@ body {
   border-radius: 4px;
 
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
-  color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .company-svg {
@@ -613,7 +614,7 @@ body {
 
 .button .filter {
   border-color: transparent;
-  background-color:  var(--bg-button-filter);
+  background-color: var(--bg-button-filter);
   border-radius: 3px;
   padding-left: 22px;
   padding-right: 22px;
@@ -629,11 +630,11 @@ body {
   cursor: pointer;
 
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-  color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-  box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.filter.active-filter :visited{
-  background-color:  var(--bg-button-filter);
+.filter.active-filter :visited {
+  background-color: var(--bg-button-filter);
 }
 /* кнопки после наведения */
 .button .filter:hover,
@@ -679,13 +680,11 @@ body {
   text-decoration: none;
 
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  
 }
 .project-list :hover .link,
 .project-list :focus .link {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
-    
 }
 
 .project-list .item {
@@ -695,29 +694,28 @@ body {
   margin-bottom: 0;
 }
 
-
 /* ====== hover projekt list ====== */
- .project-container{
-   position: relative;
-   overflow: hidden;
- }
+.project-container {
+  position: relative;
+  overflow: hidden;
+}
 
- .text-container{
-   position: absolute;
-   width: 100%;
-   height: 100%;
-   
-   left: 0;
-   top: 0;
+.text-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
 
-   background-color: var(--bg-poject-hover);
+  left: 0;
+  top: 0;
 
-   transform: translateY(100%);
-   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
-   opacity 250ms cubic-bezier(0.4, 0, 0.2, 1); 
-   opacity: 0;  
- }
- .project-text{
+  background-color: var(--bg-poject-hover);
+
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+}
+.project-text {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -735,14 +733,14 @@ body {
 
   transform: translate(-50%, -50%);
 }
- .project-list :hover .text-container {
+.project-list :hover .text-container {
   opacity: 1;
-  transform: translateY(0%); 
+  transform: translateY(0%);
 }
 
 /* ====== backdrop ====== */
 
-.backdrop{
+.backdrop {
   position: fixed;
   width: 100%;
   height: 100%;
@@ -756,34 +754,32 @@ body {
   transform: scale(1);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.backdrop.is-hidden{
+.backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
-  visibility: hidden;
-  
+  /* visibility: hidden; */
 }
-.backdrop.is-hidden .modal{
-  transform:translate(-50%,-50%) scale(0.1);
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal{
+.modal {
   position: absolute;
   top: 50%;
   left: 50%;
-
 
   width: 528px;
   height: 581px;
 
   background-color: var(--bg-main-page-color);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
-   0px 1px 1px rgba(0, 0, 0, 0.14),
-   0px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 
-  transform:translate(-50%,-50%) scale(1.0);
+  transform: translate(-50%, -50%) scale(1) rotate(360deg);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.close-link{
+.close-link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -800,14 +796,13 @@ body {
   border-radius: 50%;
 
   color: var(--name-color);
-
 }
 .close-link :hover,
-.close-link :focus{
-  fill:var(--bg-button-color);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+.close-link :focus {
+  fill: var(--bg-button-color);
+  transition: fill 5250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.icon-close{
- fill: currentColor;
- transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+.icon-close {
+  fill: currentColor;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
