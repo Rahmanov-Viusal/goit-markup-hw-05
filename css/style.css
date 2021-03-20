@@ -256,9 +256,10 @@ body {
   color: var(--button-color);
   background-color: var(--bg-button-color);
   font-style: normal;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 16px;
   line-height: 1.8;
+  letter-spacing: 0.06em;
 
   cursor: pointer;
 
@@ -742,8 +743,8 @@ body {
 
 .backdrop {
   position: fixed;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   left: 0;
   bottom: 0;
 
@@ -805,4 +806,35 @@ body {
 .icon-close {
   fill: currentColor;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+/* ===== data title ===== */
+.data-title {
+  position: absolute;
+  left: 40px;
+  top: 40px;
+
+  width: 448px;
+  height: 23px;
+
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: var(--nav-color);
+}
+.send-modal {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+
+  transform: translateX(-50%);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.send-modal:hover {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
